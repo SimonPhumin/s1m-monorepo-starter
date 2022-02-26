@@ -14,17 +14,9 @@
         "default": {
             "runner": "@nrwl/workspace/tasks-runners/default",
             "options": {
-                "cacheableOperations": ["build", "lint", "test", "e2e"]
+                "cacheableOperations": ["build", "lint", "test", "e2e"],
+                "parallel": 1
             }
-        }
-    },
-    "projects": {
-        "s1m-monorepo-starter": {
-            "tags": []
-        },
-        "s1m-monorepo-starter-e2e": {
-            "tags": [],
-            "implicitDependencies": ["s1m-monorepo-starter"]
         }
     },
     "cli": {
@@ -51,11 +43,18 @@
         },
         "@nrwl/angular:library": {
             "linter": "eslint",
-            "unitTestRunner": "jest",
-            "style": "scss"
+            "unitTestRunner": "jest"
         },
         "@nrwl/angular:component": {
             "style": "scss"
         }
+    },
+    "targetDependencies": {
+        "build": [
+            {
+                "target": "build",
+                "projects": "dependencies"
+            }
+        ]
     }
 }

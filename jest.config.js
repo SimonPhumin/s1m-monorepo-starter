@@ -1,10 +1,3 @@
-module.exports = {
-    projects: [
-        '<rootDir>/apps/s1m-monorepo-starter',
-        '<rootDir>/apps/api',
-        '<rootDir>/libs/environments',
-        '<rootDir>/libs/core',
-        '<rootDir>/libs/stores/users',
-        '<rootDir>/apps/user-management'
-    ]
-};
+const { getJestProjects } = require('@nrwl/jest');
+
+module.exports = { projects: getJestProjects() };
