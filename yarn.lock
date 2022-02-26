@@ -17,6 +17,26 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
+"@angular-architects/module-federation-runtime@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation-runtime/-/module-federation-runtime-13.0.1.tgz#0cbcb869fb319365be2083dfbce00701e6bf1b14"
+  integrity sha512-lvXmdCN+/JJMDm3h+FlNPc+lwFgNC3/J7Dr5h6ZHXT6sGgelcUQPpGxO1QUiE87XmUG8/Gdo57CebS0TKCklyQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@angular-architects/module-federation@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation/-/module-federation-13.0.1.tgz#b2473e8b2de5fa8b4c0847d4391030642dbf55f4"
+  integrity sha512-NFf/UOsP/MjyzaqgDynVYvtoaBKogXTQNAVYGNra/dKwrr2O9gJ7njrjzUih5M2KuG6oJaOvl0D/Dop4PES1FQ==
+  dependencies:
+    "@angular-architects/module-federation-runtime" "^13.0.1"
+    callsite "^1.0.0"
+    ngx-build-plus "^13.0.0"
+    node-fetch "^2.6.1"
+    rxjs "~6.6.3"
+    semver "^7.3.5"
+    word-wrap "^1.2.3"
+
 "@angular-devkit/architect@0.1302.5":
   version "0.1302.5"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1302.5.tgz#24284a44dcfcfd6bd5ee00a086f10f8d58316ad3"
@@ -25,7 +45,7 @@
     "@angular-devkit/core" "13.2.5"
     rxjs "6.6.7"
 
-"@angular-devkit/build-angular@13.2.5":
+"@angular-devkit/build-angular@13.2.5", "@angular-devkit/build-angular@^13.0.0":
   version "13.2.5"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-13.2.5.tgz#26c5ef3a5f158e7bbc85fedf9d9480e1726cade8"
   integrity sha512-ny80YoLOrS6USJCzCChj1ZOEVTldcx0KWo3e86barmt5iVA2ekrnsQ02Bor5Bl5NlZFpE6Fu0FCXFAQZElFmcg==
@@ -2250,7 +2270,7 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@schematics/angular@13.2.5", "@schematics/angular@~13.2.0":
+"@schematics/angular@13.2.5", "@schematics/angular@^13.0.0", "@schematics/angular@~13.2.0":
   version "13.2.5"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-13.2.5.tgz#cb07c0355dd4f8586960f9dc7862777f9a662f29"
   integrity sha512-pUaTwyMZRy7laV9RQozREomiUKi7Tn4wdyyuCUSqVvaiLI+DKvWE4vJXA2+/ketfzRjx6xIaCEexjsHJ+2FNtg==
@@ -3717,6 +3737,11 @@ call-bind@^1.0.0, call-bind@^1.0.2:
   dependencies:
     function-bind "^1.1.1"
     get-intrinsic "^1.0.2"
+
+callsite@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/callsite/-/callsite-1.0.0.tgz#280398e5d664bd74038b6f0905153e6e8af1bc20"
+  integrity sha1-KAOY5dZkvXQDi28JBRU+borxvCA=
 
 callsites@^3.0.0:
   version "3.1.0"
@@ -7738,6 +7763,15 @@ neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ngx-build-plus@^13.0.0:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-build-plus/-/ngx-build-plus-13.0.1.tgz#60d78d1f5a104e1c3338861b0c089b2ad1442809"
+  integrity sha512-3wuQ0/xyTC4+CU2wROgKe1TPCnghTj5aGcLCxbmWFZDrAneMW6t2QmAg0nJpapXzxhcL7JJnVYKnh2c/ARr62A==
+  dependencies:
+    "@angular-devkit/build-angular" "^13.0.0"
+    "@schematics/angular" "^13.0.0"
+    webpack-merge "^5.0.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
@@ -10295,7 +10329,7 @@ webpack-merge@5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-merge@5.8.0, webpack-merge@^5.8.0:
+webpack-merge@5.8.0, webpack-merge@^5.0.0, webpack-merge@^5.8.0:
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.8.0.tgz#2b39dbf22af87776ad744c390223731d30a68f61"
   integrity sha512-/SaI7xY0831XwP6kzuwhKWVKDP9t1QY1h65lAFLbZqMPIuYcD9QAW4u9STIbU9kaJbPBB/geU/gLr1wDjOhQ+Q==
