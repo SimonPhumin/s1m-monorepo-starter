@@ -39,7 +39,12 @@
     "@angular/platform-browser": "13.2.4",
     "@angular/platform-browser-dynamic": "13.2.4",
     "@angular/router": "13.2.4",
+    "@nestjs/common": "^7.0.0",
+    "@nestjs/core": "^7.0.0",
+    "@nestjs/platform-express": "^7.0.0",
+    "@ngrx/store": "^13.0.2",
     "@nrwl/angular": "13.8.3",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "0.11.4"
@@ -52,11 +57,15 @@
     "@angular/cli": "13.2.5",
     "@angular/compiler-cli": "13.2.4",
     "@angular/language-service": "13.2.4",
+    "@nestjs/schematics": "^8.0.0",
+    "@nestjs/testing": "^7.0.0",
     "@nrwl/cli": "13.8.3",
     "@nrwl/cypress": "13.8.3",
     "@nrwl/eslint-plugin-nx": "13.8.3",
     "@nrwl/jest": "13.8.3",
     "@nrwl/linter": "13.8.3",
+    "@nrwl/nest": "^13.8.3",
+    "@nrwl/node": "13.8.3",
     "@nrwl/tao": "13.8.3",
     "@nrwl/workspace": "13.8.3",
     "@types/jest": "27.0.2",
@@ -73,7 +82,7 @@
     "prettier": "2.5.1",
     "ts-jest": "27.0.5",
     "ts-node": "~9.1.1",
-    "typescript": "4.5.5"
+    "typescript": "4.5.5",
+    "eslint-plugin-ngrx": "^2.0.0"
   }
 }
-
