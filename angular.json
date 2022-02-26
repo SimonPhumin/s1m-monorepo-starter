@@ -1,150 +1,242 @@
 {
-  "version": 1,
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "defaultProject": "s1m-monorepo-starter",
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
-  },
-  "projects": {
-    "s1m-monorepo-starter": {
-      "projectType": "application",
-      "root": "apps/s1m-monorepo-starter",
-      "sourceRoot": "apps/s1m-monorepo-starter/src",
-      "prefix": "s1m",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/s1m-monorepo-starter",
-            "index": "apps/s1m-monorepo-starter/src/index.html",
-            "main": "apps/s1m-monorepo-starter/src/main.ts",
-            "polyfills": "apps/s1m-monorepo-starter/src/polyfills.ts",
-            "tsConfig": "apps/s1m-monorepo-starter/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "apps/s1m-monorepo-starter/src/favicon.ico",
-              "apps/s1m-monorepo-starter/src/assets"
-            ],
-            "styles": ["apps/s1m-monorepo-starter/src/styles.scss"],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/s1m-monorepo-starter/src/environments/environment.ts",
-                  "with": "apps/s1m-monorepo-starter/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+    "version": 1,
+    "projects": {
+        "api": {
+            "root": "apps/api",
+            "sourceRoot": "apps/api/src",
+            "projectType": "application",
+            "architect": {
+                "build": {
+                    "builder": "@nrwl/node:build",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/apps/api",
+                        "main": "apps/api/src/main.ts",
+                        "tsConfig": "apps/api/tsconfig.app.json",
+                        "assets": ["apps/api/src/assets"]
+                    },
+                    "configurations": {
+                        "production": {
+                            "optimization": true,
+                            "extractLicenses": true,
+                            "inspect": false,
+                            "fileReplacements": [
+                                {
+                                    "replace": "apps/api/src/environments/environment.ts",
+                                    "with": "apps/api/src/environments/environment.prod.ts"
+                                }
+                            ]
+                        }
+                    }
                 },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                "serve": {
+                    "builder": "@nrwl/node:execute",
+                    "options": {
+                        "buildTarget": "api:build"
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["apps/api/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/api"],
+                    "options": {
+                        "jestConfig": "apps/api/jest.config.js",
+                        "passWithNoTests": true
+                    }
                 }
-              ]
+            },
+            "tags": []
+        },
+        "core": {
+            "root": "libs/core",
+            "sourceRoot": "libs/core/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/core/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/core"],
+                    "options": {
+                        "jestConfig": "libs/core/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
+        "environments": {
+            "root": "libs/environments",
+            "sourceRoot": "libs/environments/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/environments/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/environments"],
+                    "options": {
+                        "jestConfig": "libs/environments/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
+        "s1m-monorepo-starter": {
+            "projectType": "application",
+            "root": "apps/s1m-monorepo-starter",
+            "sourceRoot": "apps/s1m-monorepo-starter/src",
+            "prefix": "s1m",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/apps/s1m-monorepo-starter",
+                        "index": "apps/s1m-monorepo-starter/src/index.html",
+                        "main": "apps/s1m-monorepo-starter/src/main.ts",
+                        "polyfills": "apps/s1m-monorepo-starter/src/polyfills.ts",
+                        "tsConfig": "apps/s1m-monorepo-starter/tsconfig.app.json",
+                        "aot": true,
+                        "assets": [
+                            "apps/s1m-monorepo-starter/src/favicon.ico",
+                            "apps/s1m-monorepo-starter/src/assets"
+                        ],
+                        "styles": ["apps/s1m-monorepo-starter/src/styles.scss"],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "apps/s1m-monorepo-starter/src/environments/environment.ts",
+                                    "with": "apps/s1m-monorepo-starter/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "s1m-monorepo-starter:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "s1m-monorepo-starter:build:production"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "s1m-monorepo-starter:build"
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "apps/s1m-monorepo-starter/src/**/*.ts",
+                            "apps/s1m-monorepo-starter/src/**/*.html"
+                        ]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/s1m-monorepo-starter"],
+                    "options": {
+                        "jestConfig": "apps/s1m-monorepo-starter/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
             }
-          }
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "s1m-monorepo-starter:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "s1m-monorepo-starter:build:production"
+        "s1m-monorepo-starter-e2e": {
+            "root": "apps/s1m-monorepo-starter-e2e",
+            "sourceRoot": "apps/s1m-monorepo-starter-e2e/src",
+            "projectType": "application",
+            "architect": {
+                "e2e": {
+                    "builder": "@nrwl/cypress:cypress",
+                    "options": {
+                        "cypressConfig": "apps/s1m-monorepo-starter-e2e/cypress.json",
+                        "tsConfig": "apps/s1m-monorepo-starter-e2e/tsconfig.e2e.json",
+                        "devServerTarget": "s1m-monorepo-starter:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "s1m-monorepo-starter:serve:production"
+                        }
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "apps/s1m-monorepo-starter-e2e/**/*.{js,ts}"
+                        ]
+                    }
+                }
             }
-          }
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "s1m-monorepo-starter:build"
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/s1m-monorepo-starter/src/**/*.ts",
-              "apps/s1m-monorepo-starter/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/s1m-monorepo-starter"],
-          "options": {
-            "jestConfig": "apps/s1m-monorepo-starter/jest.config.js",
-            "passWithNoTests": true
-          }
+        "stores-users": {
+            "root": "libs/stores/users",
+            "sourceRoot": "libs/stores/users/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/stores/users/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/stores/users"],
+                    "options": {
+                        "jestConfig": "libs/stores/users/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
         }
-      }
-    },
-    "s1m-monorepo-starter-e2e": {
-      "root": "apps/s1m-monorepo-starter-e2e",
-      "sourceRoot": "apps/s1m-monorepo-starter-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/s1m-monorepo-starter-e2e/cypress.json",
-            "tsConfig": "apps/s1m-monorepo-starter-e2e/tsconfig.e2e.json",
-            "devServerTarget": "s1m-monorepo-starter:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "s1m-monorepo-starter:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/s1m-monorepo-starter-e2e/**/*.{js,ts}"]
-          }
-        }
-      }
     }
-  }
 }
