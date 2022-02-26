@@ -44,6 +44,9 @@ module.exports = {
     },
     plugins: [
         new ModuleFederationPlugin({
+            library: {
+                type: 'module'
+            },
             remotes: {},
             shared: share({
                 '@angular/core': {

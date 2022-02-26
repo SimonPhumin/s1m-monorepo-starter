@@ -175,7 +175,8 @@
                             "apps/s1m-monorepo-starter/src/**/*.ts",
                             "apps/s1m-monorepo-starter/src/**/*.html"
                         ]
-                    }
+                    },
+                    "outputs": ["{options.outputFile}"]
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
@@ -211,7 +212,8 @@
                         "lintFilePatterns": [
                             "apps/s1m-monorepo-starter-e2e/**/*.{js,ts}"
                         ]
-                    }
+                    },
+                    "outputs": ["{options.outputFile}"]
                 }
             }
         },
@@ -262,7 +264,14 @@
                         "scripts": [],
                         "customWebpackConfig": {
                             "path": "apps/user-management/webpack.config.js"
-                        }
+                        },
+                        "aot": false,
+                        "vendorChunk": true,
+                        "extractLicenses": false,
+                        "buildOptimizer": false,
+                        "sourceMap": true,
+                        "optimization": false,
+                        "namedChunks": true
                     },
                     "configurations": {
                         "production": {
@@ -289,14 +298,7 @@
                                 "path": "apps/user-management/webpack.prod.config.js"
                             }
                         },
-                        "development": {
-                            "buildOptimizer": false,
-                            "optimization": false,
-                            "vendorChunk": true,
-                            "extractLicenses": false,
-                            "sourceMap": true,
-                            "namedChunks": true
-                        }
+                        "development": {}
                     },
                     "defaultConfiguration": "production"
                 },
@@ -328,7 +330,8 @@
                             "apps/user-management/src/**/*.ts",
                             "apps/user-management/src/**/*.html"
                         ]
-                    }
+                    },
+                    "outputs": ["{options.outputFile}"]
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
