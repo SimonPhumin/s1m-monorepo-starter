@@ -4,6 +4,7 @@ module.exports = {
         '<rootDir>/apps/api',
         '<rootDir>/libs/environments',
         '<rootDir>/libs/core',
-        '<rootDir>/libs/stores/users'
+        '<rootDir>/libs/stores/users',
+        '<rootDir>/apps/user-management'
     ]
 };
