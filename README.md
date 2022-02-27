@@ -3,6 +3,7 @@
 This is my current monorepo setup including two micro-front ends built with angular.
 
 [![CircleCI](https://circleci.com/gh/nrwl/nx.svg?style=svg)](https://app.circleci.com/pipelines/github/SimonPhumin/s1m-monorepo-starter)
+[![quality gate](https://sonarcloud.io/api/project_badges/measure?project=SimonPhumin_s1m-monorepo-starter&metric=alert_status)](https://sonarcloud.io/project/overview?id=SimonPhumin_s1m-monorepo-starter)
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/simonphumin/s1m-monorepo-starter/blob/main/LICENSE)
 
 ## Ideas
