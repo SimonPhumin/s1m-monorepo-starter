@@ -82,10 +82,7 @@ module.exports = {
                     includeSecondaries: true
                 },
                 ...sharedMappings.getDescriptors()
-            }),
-            library: {
-                type: 'module'
-            }
+            })
         }),
         sharedMappings.getPlugin()
     ]
