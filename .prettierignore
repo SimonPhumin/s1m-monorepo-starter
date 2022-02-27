@@ -2,3 +2,24 @@
 
 /dist
 /coverage
+
+.prettierignore
+
+*.sh
+*.ico
+*.json
+*.map
+*.png
+*.svg
+*.xml
+*.gif
+webpack.config.js
+.gitignore
+
+**/.gitkeep
+**/hooks/**
+**/node_modules/**
+**/platforms/**
+**/fonts/*
+browserslist
+plugins/**
