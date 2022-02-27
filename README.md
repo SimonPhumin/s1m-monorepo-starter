@@ -2,7 +2,7 @@
 
 This is my current monorepo setup indlucing two micro-front ends built with angular.
 
-[![CircleCI](https://circleci.com/gh/nrwl/nx.svg?style=svg)](https://circleci.com/gh/simonphumin/s1m-monorepo-starter)
+[![CircleCI](https://circleci.com/gh/nrwl/nx.svg?style=svg)](https://app.circleci.com/pipelines/github/SimonPhumin/s1m-monorepo-starter)
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/simonphumin/s1m-monorepo-starter/blob/main/LICENSE)
 
 ## Features
