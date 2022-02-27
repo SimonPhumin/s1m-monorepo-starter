@@ -1,7 +1,11 @@
 {
-    "name": "s1m",
-    "version": "0.0.2",
+    "name": "s1m-monorepo-starter",
+    "version": "0.0.3",
     "license": "MIT",
+    "author": "Simon Phumin Schweikert",
+    "bugs": {
+        "url": "https://github.com/simonphumin/s1m-monorepo-starter/issues"
+    },
     "scripts": {
         "ng": "nx",
         "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
