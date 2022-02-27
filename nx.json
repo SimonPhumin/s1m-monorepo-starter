@@ -22,7 +22,7 @@
     "cli": {
         "defaultCollection": "@nrwl/angular"
     },
-    "defaultProject": "s1m-monorepo-starter",
+    "defaultProject": "user-management",
     "generators": {
         "@nrwl/angular": {
             "application": {
