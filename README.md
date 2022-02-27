@@ -25,7 +25,7 @@ I've been a big fan of writing .feature files with the [Gherkin](https://cucumbe
 ➡️ [Nx](https://nx.dev/) - monorepo tooling  
 ➡️ [Angular 13](https://angular.io/) - front-end  
 ➡️ [NGRX](https://ngrx.io/) - reactive state management  
-➡️ [NestJS 8](https://nestjs.com/) - api (and mocking data)
+➡️ [NestJS 8](https://nestjs.com/) - api (and mocking data)  
 ➡️ [Jest](https://jestjs.io/) - unit testing  
 ➡️ [Playwright](https://playwright.dev/) - e2e testing  
 ➡️ [ESLint](https://eslint.org/) - code linting  
