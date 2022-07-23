@@ -36,10 +36,10 @@ I've been a big fan of writing .feature files with the [Gherkin](https://cucumbe
 
 ## TODOs
 
--   [] Add quickstart section
--   [] Add development section
--   [] Add deployment section
--   [] Setup playwright with nx
--   [] Add nest.js api & core models
--   [] Add unit test examples
--   [] Add e2e test examples
+-   [ ] Add quickstart section
+-   [ ] Add development section
+-   [ ] Add deployment section
+-   [ ] Setup playwright with nx
+-   [ ] Add nest.js api & core models
+-   [ ] Add unit test examples
+-   [ ] Add e2e test examples
