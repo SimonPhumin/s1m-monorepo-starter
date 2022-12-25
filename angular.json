@@ -276,6 +276,9 @@
 							"apps/user-management/src/assets"
 						],
 						"styles": ["apps/user-management/src/styles.scss"],
+						"stylePreprocessorOptions": {
+							"includePaths": ["libs/assets/scss/"]
+						},
 						"scripts": [],
 						"customWebpackConfig": {
 							"path": "apps/user-management/webpack.config.js"
