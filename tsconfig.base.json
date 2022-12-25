@@ -1,24 +1,24 @@
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "rootDir": ".",
-        "sourceMap": true,
-        "declaration": false,
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "importHelpers": true,
-        "target": "es2021",
-        "module": "esnext",
-        "lib": ["es2021", "dom"],
-        "skipLibCheck": true,
-        "skipDefaultLibCheck": true,
-        "baseUrl": ".",
-        "paths": {
-            "@s1m/core": ["libs/core/src/index.ts"],
-            "@s1m/environments": ["libs/environments/src/index.ts"],
-            "@s1m/stores/users": ["libs/stores/users/src/index.ts"]
-        }
-    },
-    "exclude": ["node_modules", "tmp"]
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2021",
+		"module": "esnext",
+		"lib": ["es2021", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@s1m/core": ["libs/core/src/index.ts"],
+			"@s1m/environments": ["libs/environments/src/index.ts"],
+			"@s1m/stores/users": ["libs/stores/users/src/index.ts"]
+		}
+	},
+	"exclude": ["node_modules", "tmp"]
 }
