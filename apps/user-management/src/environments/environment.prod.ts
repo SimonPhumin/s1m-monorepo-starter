@@ -1,3 +1,1 @@
-export const environment = {
-    production: true
-};
+export { prodEnvironment as environment } from '@s1m/environments';
