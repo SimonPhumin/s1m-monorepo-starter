@@ -20,20 +20,25 @@ I've been a big fan of writing .feature files with the [Gherkin](https://cucumbe
 
 ➡️ [Nx](https://nx.dev/) - monorepo tooling  
 ➡️ [Angular 15](https://angular.io/) - front-end framework  
-➡️ [Material Design](https://material.angular.io/) - UI component library
+➡️ [Material Design](https://material.angular.io/) - UI component library  
 ➡️ [NGRX](https://ngrx.io/) - reactive-state management  
-➡️ [NestJS 9](https://nestjs.com/) - api (and mocking data)  
+➡️ [NestJS 9](https://nestjs.com/) - api/back end (and mocking data)  
 ➡️ [Jest](https://jestjs.io/) - unit testing  
 ➡️ [Playwright](https://playwright.dev/) - e2e testing  
 ➡️ [ESLint](https://eslint.org/) - code linting  
 ➡️ [Prettier](https://prettier.io/) - code formatting  
-➡️ [netlify](https://www.netlify.com/) - front-end deployment to netlify
+➡️ [netlify](https://www.netlify.com/) - front-end deployment to netlify  
+➡️ [AWS Lambda](https://aws.amazon.com/lambda/) - back-end deployment to AWS Lambda (serverless)
 
 ## Get Started
 
 ## Development
 
 ## Deployment
+
+### Front End - Netlify
+
+### Back End - AWS Lambda
 
 ## TODOs
 
