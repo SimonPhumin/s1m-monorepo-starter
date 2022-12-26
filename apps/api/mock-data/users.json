@@ -1,0 +1,64 @@
+{
+	"users": [
+		{
+			"uuid": "1",
+			"authentication": {},
+			"roles": {},
+			"info": {
+				"firstName": "Firstname1",
+				"secondName": "Lastname1",
+				"email": "firstname.lastname@email.com",
+				"phone": "",
+				"mobile": "",
+				"address": {
+					"country": "Austria",
+					"countryShortCode": "AT",
+					"street": "Some Street",
+					"streetNumber": "42",
+					"zip": 1337,
+					"city": "Some City"
+				}
+			}
+		},
+		{
+			"uuid": "2",
+			"authentication": {},
+			"roles": {},
+			"info": {
+				"firstName": "Firstname2",
+				"secondName": "Lastname2",
+				"email": "firstname.lastname@email.com",
+				"phone": "",
+				"mobile": "",
+				"address": {
+					"country": "Netherlands",
+					"countryShortCode": "NL",
+					"street": "Some Street",
+					"streetNumber": "42",
+					"zip": 1337,
+					"city": "Some City"
+				}
+			}
+		},
+		{
+			"uuid": "3",
+			"authentication": {},
+			"roles": {},
+			"info": {
+				"firstName": "Firstname3",
+				"secondName": "Lastname3",
+				"email": "firstname.lastname@email.com",
+				"phone": "",
+				"mobile": "",
+				"address": {
+					"country": "Germany",
+					"countryShortCode": "DE",
+					"street": "Some Street",
+					"streetNumber": "42",
+					"zip": 1337,
+					"city": "Some City"
+				}
+			}
+		}
+	]
+}
