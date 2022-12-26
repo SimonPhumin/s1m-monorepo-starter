@@ -17,6 +17,7 @@
 		"paths": {
 			"@s1m/core": ["libs/core/src/index.ts"],
 			"@s1m/environments": ["libs/environments/src/index.ts"],
+			"@s1m/material": ["libs/common/ui/material/src/index.ts"],
 			"@s1m/stores/users": ["libs/stores/users/src/index.ts"]
 		}
 	},
