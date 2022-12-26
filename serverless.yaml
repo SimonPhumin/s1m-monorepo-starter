@@ -1,0 +1,37 @@
+service: nx-nestjs-api
+
+custom:
+    prune:
+        automatic: true
+        number: 3
+    serverless-layers:
+        dependenciesPath: ./package.json
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    region: us-east-1
+    profile: default
+    stage: development
+plugins:
+    - serverless-layers
+
+package:
+    individually: true
+    include:
+        - dist/apps/api/**
+    exclude:
+        - '**'
+
+functions:
+    index:
+        handler: dist/apps/api/main.handler
+        events:
+            - http:
+                  cors: true
+                  path: '/'
+                  method: any
+            - http:
+                  cors: true
+                  path: '{proxy+}'
+                  method: any
