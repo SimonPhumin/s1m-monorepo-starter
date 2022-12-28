@@ -1,0 +1,30 @@
+service: s1m-monorepo-api
+org: simonphumin
+app: s1m-monorepo-api
+
+plugins:
+    - serverless-plugin-typescript
+    - serverless-plugin-optimize
+    # - serverless-offline
+
+provider:
+    name: aws
+    runtime: nodejs12.x
+    region: us-west-1
+    stage: ${opt:stage, 'dev'}
+
+functions:
+    api:
+        handler: ./apps/api/src/lambda.main
+        #    The following are a few example events you can configure
+        #    NOTE: Please make sure to change your handler code to work with those events
+        #    Check the event documentation for details
+        events:
+            - http:
+                  cors: true
+                  method: any
+                  path: /{any+}
+            - http:
+                  cors: true
+                  method: any
+                  path: /
