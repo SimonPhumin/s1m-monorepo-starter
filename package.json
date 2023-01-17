@@ -48,7 +48,7 @@
     "@nestjs/core": "9.2.1",
     "@nestjs/platform-express": "9.2.1",
     "@ngrx/store": "15.1.0",
-    "@nrwl/angular": "15.4.1",
+    "@nrwl/angular": "15.4.2",
     "reflect-metadata": "0.1.13",
     "rxjs": "~7.8.0",
     "tslib": "2.4.1",
