@@ -7,6 +7,7 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"strictTemplates": true,
 		"importHelpers": true,
 		"target": "es2021",
 		"module": "esnext",
@@ -15,6 +16,7 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
+			"@s1m/common/data": ["libs/common/data/src/index.ts"],
 			"@s1m/core": ["libs/core/src/index.ts"],
 			"@s1m/environments": ["libs/environments/src/index.ts"],
 			"@s1m/material": ["libs/common/ui/material/src/index.ts"],

@@ -1,15 +1,18 @@
-// import * as fs from 'fs';
-// import { CommandResult } from '@s1m/common/shared/data';
+import * as fs from 'fs';
+interface CommandResult {
+	success: string;
+	error: string;
+}
 
-// export const readJsonFile = (path: string) => {
-// 	const data: Buffer = fs.readFileSync(path);
+export const readJsonFile = (path: string) => {
+	const data: Buffer = fs.readFileSync(path);
 
-// 	return JSON.parse(data.toString());
-// };
+	return JSON.parse(data.toString());
+};
 
-// export const createResponse = (code: number, msg: string): CommandResult => ({
-// 	status: {
-// 		code,
-// 		msg
-// 	}
-// });
+export const createResponse = (code: number, msg: string) => ({
+	status: {
+		code,
+		msg
+	}
+});

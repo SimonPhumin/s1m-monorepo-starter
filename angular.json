@@ -1,5 +1,4 @@
 {
-	"version": 1,
 	"projects": {
 		"api": {
 			"root": "apps/api",
@@ -320,5 +319,6 @@
 			"tags": [],
 			"implicitDependencies": ["user-management"]
 		}
-	}
+	},
+	"version": 1
 }
