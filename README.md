@@ -2,7 +2,6 @@
 
 WIP: This is my current Angular 15 monorepo setup.
 
-[![CircleCI](https://circleci.com/gh/nrwl/nx.svg?style=svg)](https://app.circleci.com/pipelines/github/SimonPhumin/s1m-monorepo-starter)
 [![quality gate](https://sonarcloud.io/api/project_badges/measure?project=SimonPhumin_s1m-monorepo-starter&metric=alert_status)](https://sonarcloud.io/project/overview?id=SimonPhumin_s1m-monorepo-starter)
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/simonphumin/s1m-monorepo-starter/blob/main/LICENSE)
 
@@ -13,8 +12,8 @@ Read more about trunk-based development [here](https://trunkbaseddevelopment.com
 
 ## Behavior-Driven Development (BDD)
 
-In BDD you write your system requirements in structural but natural language. Writing end-to-end tests in a natural language enlarges the audience that can read and use them.
-I've been a big fan of writing .feature files with the [Gherkin](https://cucumber.io/docs/gherkin/) syntax. User stories are based on a similar approach and therefore .feature files not only help stakeholders to better understand specific user flows or scenarios, they can also be used as a skeleton for automated tests.
+In BDD you write your system requirements in structural but natural language. Writing end-to-end tests in natural language enlarges the audience that can read and use them.
+Basic .feature files are written with [Gherkin](https://cucumber.io/docs/gherkin/) syntax. User stories (and even use cases) are based on a similar structure and therefore .feature files won't only help stakeholders to better understand specific user flows or scenarios, they can also be used as a skeleton for automated tests (e.g. e2e tests).
 
 ## Features
 
