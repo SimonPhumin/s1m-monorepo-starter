@@ -48,7 +48,7 @@
     "@nestjs/core": "9.3.9",
     "@nestjs/platform-express": "9.3.9",
     "@ngrx/store": "15.3.0",
-    "@nrwl/angular": "15.7.2",
+    "@nrwl/angular": "15.8.5",
     "playwright": "^1.31.1",
     "reflect-metadata": "0.1.13",
     "rxjs": "~7.8.0",
