@@ -1,1 +1,1 @@
-export { prodEnvironment as environment } from '@s1m/environments';
+export { prodEnvironment } from '@s1m/environments';

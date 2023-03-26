@@ -1,7 +1,7 @@
 {
 	"users": [
 		{
-			"uuid": "1",
+			"id": "1",
 			"authentication": {},
 			"roles": {},
 			"info": {
@@ -15,13 +15,13 @@
 					"countryShortCode": "AT",
 					"street": "Some Street",
 					"streetNumber": "42",
-					"zip": 1337,
+					"zipCode": 1337,
 					"city": "Some City"
 				}
 			}
 		},
 		{
-			"uuid": "2",
+			"id": "2",
 			"authentication": {},
 			"roles": {},
 			"info": {
@@ -35,13 +35,13 @@
 					"countryShortCode": "NL",
 					"street": "Some Street",
 					"streetNumber": "42",
-					"zip": 1337,
+					"zipCode": 1337,
 					"city": "Some City"
 				}
 			}
 		},
 		{
-			"uuid": "3",
+			"id": "3",
 			"authentication": {},
 			"roles": {},
 			"info": {
@@ -55,7 +55,7 @@
 					"countryShortCode": "DE",
 					"street": "Some Street",
 					"streetNumber": "42",
-					"zip": 1337,
+					"zipCode": 1337,
 					"city": "Some City"
 				}
 			}
