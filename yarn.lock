@@ -249,10 +249,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/cdk@15.2.0":
-  version "15.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-15.2.0.tgz#0711ace8b2d30f0512d5a9bd6342ea5962ff33e4"
-  integrity sha512-+D0gLmDZVCBMSZ6juImP0eXpL40hw4Ipm8KRQmF3UOU9T5xXMxzYjUI8N3J+ZUZsNzQwy+eW0HImkZ5St6YxvA==
+"@angular/cdk@15.2.2":
+  version "15.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-15.2.2.tgz#10d092f0a79d128060fd52db6c7462052639e8b3"
+  integrity sha512-mgh8QCJUmxVNT+vX7A3GDp48NVZ/CUrBBXN7ZGYs8hrupLyHLerjadWX8pRa7XIOJzreoOOdHH5THc51+SCGJw==
   dependencies:
     tslib "^2.3.0"
   optionalDependencies:
@@ -331,10 +331,10 @@
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-15.2.0.tgz#5256d7269c2755b30bd918d8cf555789c5a4517a"
   integrity sha512-Gwg/IWPiBZ+LE0hHxtQGvQuJ+A7YehL6p0k26ClP0HS7Wy0ERRD9+ITGh5SnhKTKVMRwOb4HYcLp0N5W3yTajw==
 
-"@angular/material@^15.2.0":
-  version "15.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-15.2.0.tgz#7613ebecf0e92569c17b4bbcd539f2f46d8e8b6e"
-  integrity sha512-3Y6MMureeqFx5mzVnLuWrm+MXtTBAZGq0cPNcS3HUSv4gpKE3gSE0b3I4c/jFF5tcS2eQKNkU/HDvSFrYz8/iA==
+"@angular/material@^15.2.2":
+  version "15.2.5"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-15.2.5.tgz#a0531b629334dfd2997dd01e549bd0c40680f4e9"
+  integrity sha512-Lk6l1VsBA2ActVN9YsX2W5lVFYHJEVwswbbUdBPjWaXJzp7TdgghTFczac7vsNA6y3DM3Rd+CvRsJPD2kK4g4A==
   dependencies:
     "@material/animation" "15.0.0-canary.684e33d25.0"
     "@material/auto-init" "15.0.0-canary.684e33d25.0"
@@ -9476,12 +9476,7 @@ htmlescape@^1.1.0:
   resolved "https://registry.yarnpkg.com/htmlescape/-/htmlescape-1.1.1.tgz#3a03edc2214bca3b66424a3e7959349509cb0351"
   integrity sha512-eVcrzgbR4tim7c7soKQKtxa/kQM4TzjnlU83rcZ9bHU6t31ehfV7SktN6McWgwPWg+JYMA/O3qpGxBvFq1z2Jg==
 
-http-cache-semantics@^4.0.0, http-cache-semantics@^4.1.0:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz#abe02fcb2985460bf0323be664436ec3476a6d5a"
-  integrity sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==
-
-http-cache-semantics@^4.1.1:
+http-cache-semantics@^4.0.0, http-cache-semantics@^4.1.0, http-cache-semantics@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz#abe02fcb2985460bf0323be664436ec3476a6d5a"
   integrity sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==
