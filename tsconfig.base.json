@@ -3,8 +3,7 @@
 	"compilerOptions": {
 		"rootDir": ".",
 		"sourceMap": true,
-		"declaration": false,
-		"composite": true,
+		"declaration": true,
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
