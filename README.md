@@ -41,10 +41,10 @@ Basic .feature files are written with [Gherkin](https://cucumber.io/docs/gherkin
 
 ## TODOs
 
--   [ ] Add quickstart section
--   [ ] Add development section
--   [ ] Add deployment section
--   [ ] Setup playwright with nx
--   [ ] Add nest.js api & core models
--   [ ] Add unit test examples
--   [ ] Add e2e test examples
+- [ ] Add quickstart section
+- [ ] Add development section
+- [ ] Add deployment section
+- [ ] Setup playwright with nx
+- [ ] Add nest.js api & core models
+- [ ] Add unit test examples
+- [ ] Add e2e test examples
