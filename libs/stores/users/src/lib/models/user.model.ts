@@ -1,6 +1,6 @@
 export interface UserObject {
 	id: number;
-	roles: {};
+	// roles: {};
 	info: {
 		firstName: string;
 		lastName: string;
@@ -19,4 +19,8 @@ export interface UserObject {
 
 export interface UserModel {}
 
-export interface UserBody {}
+// Add toModel & toObject factory functions here (use dictionary)
+
+export interface UserBody {
+	users: Array<UserObject>;
+}
