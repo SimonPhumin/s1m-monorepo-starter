@@ -11,7 +11,7 @@ export class UsersService {
 		this.users = data.users;
 	}
 
-	getUsers(): Users {
+	getUsers(): UserBody {
 		return { users: this.users };
 	}
 
