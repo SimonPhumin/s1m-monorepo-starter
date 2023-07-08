@@ -7,7 +7,7 @@ import {
 	Patch,
 	Post
 } from '@nestjs/common';
-import { UserModel, Users } from '@s1m/common/data';
+import { UserModel, UserBody } from '@s1m/stores/users';
 import { Observable } from 'rxjs';
 import { createResponse } from '../tools';
 import { UsersService } from './users.service';
@@ -17,29 +17,29 @@ export class UsersController {
 	constructor(private readonly usersService: UsersService) {}
 
 	@Get()
-	getusers(): Observable<Users> {
+	getusers(): Observable<UserBody> {
 		return this.usersService.getUsers();
 	}
 
 	@Post()
-	createUser(@Body() body: UserModel): Observable<Users> {
+	createUser(@Body() body: UserModel): Observable<UserBody> {
 		const { user } = body;
 		return this.usersService.addUser(user);
 	}
 
 	@Patch()
-	updateUser(@Body() body: UserModel): Observable<Users> {
+	updateUser(@Body() body: UserModel): Observable<UserBody> {
 		const { user } = body;
 		return this.usersService.updateUser(user);
 	}
 
-	// @Delete(':uuid')
-	// deleteUser(@Param('uuid') uuid: string): Observable<Users> {
-	// 	return this.usersService.deleteUser(uuid);
-	// }
+	@Delete(':uuid')
+	deleteUser(@Param('uuid') uuid: string): Observable<UserBody> {
+		return this.usersService.deleteUser(uuid);
+	}
 
 	@Get(':uuid')
-	getUser(@Param('uuid') uuid: string): Observable<Users> {
+	getUser(@Param('uuid') uuid: string): Observable<UserBody> {
 		const user = this.usersService.getUser(uuid);
 		return user ? user : this.userNotFound(uuid);
 	}
