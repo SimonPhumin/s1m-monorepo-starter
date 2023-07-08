@@ -17,10 +17,13 @@ export interface UserObject {
 	};
 }
 
-export interface UserModel {}
+export interface UserModel {
+	id: number;
+	// Object types here...
+}
 
 // Add toModel & toObject factory functions here (use dictionary)
 
 export interface UserBody {
-	users: Array<UserObject>;
+	user: UserModel;
 }

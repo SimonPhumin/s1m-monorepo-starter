@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { readJsonFile } from '../tools';
+import { UserBody, UserModel, UserObject } from '@s1m/stores/users';
 @Injectable()
 export class UsersService {
 	private users: UserObject[] = [];
@@ -15,30 +16,28 @@ export class UsersService {
 		return { users: this.users };
 	}
 
-	getUser(uuid: string): UserModel {
-		const user = this.users.find((candidate) => candidate.uuid === uuid);
+	getUser(id: string): UserModel {
+		const user = this.users.find((candidate) => candidate.id === id);
 		return user ? { user } : undefined;
 	}
 
 	addUser(user: UserObject): UserModel {
-		const uuid = `${this.users.length + 1}`;
+		const id = `${this.users.length + 1}`;
 		const newUser: UserObject = {
-			uuid,
+			id,
 			...user
 		};
 		this.users.push(newUser);
 		return { user };
 	}
 
-	deleteUser(uuid: string) {
-		const userIndex = this.users.findIndex((user) => user.uuid === uuid);
-		this.users.splice(userIndex, 1);
+	deleteUser(id: string) {
+		const userIndex = this.users.findIndex((user) => user.id === id);
+		return this.users.splice(userIndex, 1);
 	}
 
 	updateUser(user: UserObject): UserModel {
-		const oldIndex = this.users.findIndex(
-			(item) => item.uuid === user.uuid
-		);
+		const oldIndex = this.users.findIndex((item) => item.id === user.id);
 		this.users[oldIndex] = user;
 		return { user };
 	}
