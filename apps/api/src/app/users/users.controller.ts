@@ -1,50 +1,57 @@
+import { Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import {
-	Body,
-	Controller,
-	Delete,
-	Get,
-	Param,
-	Patch,
-	Post
-} from '@nestjs/common';
-import { UserModel, UserBody } from '@s1m/stores/users';
-import { Observable } from 'rxjs';
+	UserModel,
+	UserObject,
+	UsersBody,
+	toUserObject
+} from '@s1m/stores/users';
 import { createResponse } from '../tools';
 import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
-	constructor(private readonly usersService: UsersService) {}
+	constructor(private usersService: UsersService) {}
 
 	@Get()
-	getusers(): Observable<UserBody> {
+	async getusers(): Promise<UsersBody> {
 		return this.usersService.getUsers();
 	}
 
 	@Post()
-	createUser(@Body() body: UserModel): Observable<UserBody> {
-		const { user } = body;
-		return this.usersService.addUser(user);
+	async createUser(model: UserModel): Promise<UserObject> {
+		const object: UserObject = toUserObject(model);
+		return this.usersService.addUser(object);
 	}
 
 	@Patch()
-	updateUser(@Body() body: UserModel): Observable<UserBody> {
-		const { user } = body;
-		return this.usersService.updateUser(user);
+	async updateUser(model: UserModel): Promise<UserObject> {
+		const object: UserObject = toUserObject(model);
+		return this.usersService.updateUser(object);
 	}
 
-	@Delete(':uuid')
-	deleteUser(@Param('uuid') uuid: string): Observable<UserBody> {
-		return this.usersService.deleteUser(uuid);
+	@Delete(':id')
+	async deleteUser(@Param('id') id: number): Promise<
+		| UserObject
+		| {
+				status: { code: number; msg: string };
+		  }
+	> {
+		this.usersService.deleteUser(id);
+		return createResponse(200, `Deleted User with ID[${id}]`);
 	}
 
-	@Get(':uuid')
-	getUser(@Param('uuid') uuid: string): Observable<UserBody> {
-		const user = this.usersService.getUser(uuid);
-		return user ? user : this.userNotFound(uuid);
+	@Get(':id')
+	async getUser(@Param('id') id: number): Promise<
+		| UserObject
+		| {
+				status: { code: number; msg: string };
+		  }
+	> {
+		const user = this.usersService.getUser(id);
+		return user ? user : this.userNotFound(id);
 	}
 
-	private userNotFound(uuid: string) {
-		return createResponse(412, `Non existing UUID[${uuid}].`);
+	private userNotFound(id: number) {
+		return createResponse(412, `Non existing User-ID[${id}].`);
 	}
 }
