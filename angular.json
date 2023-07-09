@@ -123,29 +123,6 @@
 			},
 			"tags": []
 		},
-		"environments": {
-			"root": "libs/environments",
-			"sourceRoot": "libs/environments/src",
-			"projectType": "library",
-			"architect": {
-				"lint": {
-					"builder": "@nrwl/linter:eslint",
-					"outputs": ["{options.outputFile}"],
-					"options": {
-						"lintFilePatterns": ["libs/environments/**/*.ts"]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/jest:jest",
-					"outputs": ["{workspaceRoot}/coverage/libs/environments"],
-					"options": {
-						"jestConfig": "libs/environments/jest.config.ts",
-						"passWithNoTests": true
-					}
-				}
-			},
-			"tags": []
-		},
 		"stores-users": {
 			"root": "libs/stores/users",
 			"sourceRoot": "libs/stores/users/src",

@@ -1,6 +1,6 @@
 export const environment = {
 	name: 'dev',
-	serverUrl: 'http://localhost:3333',
+	serverUrl: 'http://localhost:4200',
 	production: false,
 	hmr: false,
 	features: ['users']
