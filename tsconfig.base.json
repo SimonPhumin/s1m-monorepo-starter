@@ -1,34 +1,56 @@
 {
-	"compileOnSave": false,
-	"compilerOptions": {
-		"rootDir": ".",
-		"sourceMap": true,
-		"noEmit": true,
-		"composite": false,
-		"declaration": true,
-		"downlevelIteration": true,
-		"moduleResolution": "node",
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"resolveJsonModule": true,
-		"importHelpers": true,
-		"target": "es2021",
-		"module": "esnext",
-		"lib": ["es2021", "dom"],
-		"skipLibCheck": true,
-		"skipDefaultLibCheck": true,
-		"typeRoots": ["node_modules/@types"],
-        "types": ["node"],
-		"baseUrl": ".",
-		"paths": {
-			"@s1m/common/data": ["libs/common/data/src/index.ts"],
-			"@s1m/core": ["libs/core/src/index.ts"],
-			"@s1m/environments": ["libs/environments/src/index.ts"],
-			"@s1m/material": ["libs/common/ui/material/src/index.ts"],
-			"@s1m/stores/users": ["libs/stores/users/src/index.ts"],
-			"@s1m/users": ["libs/common/features/users/src/index.ts"]
-		}
-	},
-	"exclude": ["node_modules", "tmp"],
-	"files": []
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "noEmit": true,
+    "composite": false,
+    "declaration": true,
+    "downlevelIteration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "target": "es2021",
+    "module": "esnext",
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@s1m/common/data": [
+        "libs/common/data/src/index.ts"
+      ],
+      "@s1m/core": [
+        "libs/core/src/index.ts"
+      ],
+      "@s1m/environments": [
+        "libs/environments/src/index.ts"
+      ],
+      "@s1m/material": [
+        "libs/common/ui/material/src/index.ts"
+      ],
+      "@s1m/stores/users": [
+        "libs/stores/users/src/index.ts"
+      ],
+      "@s1m/users": [
+        "libs/common/features/users/src/index.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ],
+  "files": []
 }

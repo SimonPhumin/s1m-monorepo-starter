@@ -1,14 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { readJsonFile } from '../tools';
+import { readJsonFile } from './../tools';
 import { UsersBody, UserObject } from '@s1m/stores/users';
 @Injectable()
 export class UsersService {
 	private users: UserObject[] = [];
 
 	constructor() {
-		const data = readJsonFile(
-			`${process.cwd()}/apps/server/data/user-list.json`
-		);
+		const data = readJsonFile(`${process.cwd()}/apps/api/data/users.json`);
 		this.users = data.users;
 	}
 
