@@ -1,29 +1,34 @@
-export interface UserObject {
-	id: number;
-	// roles: {};
-	info: {
-		firstName: string;
-		lastName: string;
-		email: string;
-		phone: string;
-		address: {
-			country: string;
-			countryShortCode: string;
-			street: string;
-			streetNumber: string;
-			zipCode: number;
-			city: string;
-		};
-	};
-}
+import { UserObject } from './user.object';
 
 export interface UserModel {
 	id: number;
-	// Object types here...
+	isAdmin: boolean;
+	firstName: string;
+	lastName: string;
+	email: string;
+	phone: string;
+	country: string;
+	countryShortCode: string;
+	street: string;
+	streetNumber: string;
+	zipCode: string;
+	city: string;
 }
 
-// Add toModel & toObject factory functions here (use dictionary)
-
-export interface UserBody {
-	user: UserModel;
-}
+export const toUserModel = (object: UserObject): UserModel => {
+	const { id, roles, info } = object;
+	return {
+		id,
+		isAdmin: roles.admin,
+		firstName: info.firstName,
+		lastName: info.lastName,
+		email: info.email,
+		phone: info.phone,
+		country: info.address.country,
+		countryShortCode: info.address.countryShortCode,
+		street: info.address.street,
+		streetNumber: info.address.streetNumber,
+		zipCode: info.address.zipCode,
+		city: info.address.city
+	};
+};
