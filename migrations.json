@@ -2,35 +2,45 @@
   "migrations": [
     {
       "cli": "nx",
-      "version": "16.0.0-beta.0",
-      "description": "Remove @nrwl/cli.",
-      "implementation": "./src/migrations/update-16-0-0/remove-nrwl-cli",
+      "version": "16.8.0-beta.3",
+      "description": "Escape $ in env variables",
+      "implementation": "./src/migrations/update-16-8-0/escape-dollar-sign-env-variables",
       "package": "nx",
-      "name": "16.0.0-remove-nrwl-cli"
+      "name": "16.8.0-escape-dollar-sign-env"
     },
     {
       "cli": "nx",
-      "version": "16.0.0-beta.9",
-      "description": "Replace `dependsOn.projects` and `inputs` definitions with new configuration format.",
-      "implementation": "./src/migrations/update-16-0-0/update-depends-on-to-tokens",
-      "package": "nx",
-      "name": "16.0.0-tokens-for-depends-on"
+      "version": "16.8.2-beta.0",
+      "description": "Remove invalid options (strict, noInterop) for ES6 type modules.",
+      "factory": "./src/migrations/update-16-8-2/update-swcrc",
+      "package": "@nx/js",
+      "name": "16-8-2-update-swcrc"
     },
     {
       "cli": "nx",
-      "version": "16.0.0-beta.0",
-      "description": "Replace @nrwl/nx-cloud with nx-cloud",
-      "implementation": "./src/migrations/update-16-0-0/update-nx-cloud-runner",
-      "package": "nx",
-      "name": "16.0.0-update-nx-cloud-runner"
+      "version": "16.8.0-beta.4",
+      "description": "Update to Cypress v13. Most noteable change is video recording is off by default. This migration will only update if the workspace is already on Cypress v12. https://docs.cypress.io/guides/references/migration-guide#Migrating-to-Cypress-130",
+      "implementation": "./src/migrations/update-16-8-0/cypress-13",
+      "package": "@nrwl/cypress",
+      "name": "update-16-8-0-cypress-13"
+    },
+    {
+      "version": "16.8.0",
+      "description": "update-16-8-0-add-ignored-files",
+      "implementation": "./src/migrations/update-16-8-0-add-ignored-files/update-16-8-0-add-ignored-files",
+      "package": "@nrwl/linter",
+      "name": "update-16-8-0-add-ignored-files"
     },
     {
       "cli": "nx",
-      "version": "16.2.0-beta.0",
-      "description": "Remove outputPath from run commands",
-      "implementation": "./src/migrations/update-16-2-0/remove-run-commands-output-path",
-      "package": "nx",
-      "name": "16.2.0-remove-output-path-from-run-commands"
+      "version": "16.7.0-beta.6",
+      "requires": {
+        "@angular/core": ">=16.2.0"
+      },
+      "description": "Update the @angular/cli package version to ~16.2.0.",
+      "factory": "./src/migrations/update-16-7-0/update-angular-cli",
+      "package": "@nrwl/angular",
+      "name": "update-angular-cli-version-16-2-0"
     }
   ]
 }
