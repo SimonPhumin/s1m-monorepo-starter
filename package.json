@@ -48,7 +48,7 @@
     "@ngrx/store": "16.1.0",
     "@nrwl/angular": "16.5.0",
     "axios": "^1.0.0",
-    "playwright": "^1.35.1",
+    "playwright": "^1.38.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "~7.8.1",
     "tslib": "2.6.0",
