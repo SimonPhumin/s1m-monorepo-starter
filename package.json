@@ -46,7 +46,7 @@
     "@nestjs/core": "10.0.5",
     "@nestjs/platform-express": "10.0.5",
     "@ngrx/store": "16.1.0",
-    "@nrwl/angular": "16.5.0",
+    "@nrwl/angular": "16.8.1",
     "axios": "^1.0.0",
     "playwright": "^1.35.1",
     "reflect-metadata": "0.1.13",
