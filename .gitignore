@@ -50,3 +50,4 @@ jspm_packages
 
 # nx - build
 /.build
+.nx/cache
