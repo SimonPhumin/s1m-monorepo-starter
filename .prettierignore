@@ -23,3 +23,5 @@ webpack.config.js
 **/fonts/*
 browserslist
 plugins/**
+
+/.nx/cache
