@@ -25,3 +25,4 @@ browserslist
 plugins/**
 
 /.nx/cache
+.angular
