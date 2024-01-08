@@ -1,4 +1,4 @@
-import { Handler, Context } from 'aws-lambda';
+import { Handler, Context, APIGatewayProxyEvent } from 'aws-lambda';
 import { Server } from 'http';
 import { createServer, proxy } from 'aws-serverless-express';
 import { eventContext } from 'aws-serverless-express/middleware';
@@ -6,7 +6,7 @@ import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import { AppModule } from './app/app.module';
 
-const express = require('express');
+import express from 'express';
 
 const binaryMimeTypes: string[] = [];
 
@@ -28,7 +28,7 @@ async function bootstrapServer(): Promise<Server> {
 }
 
 // Export the handler : the entry point of the Lambda function
-export const main: Handler = async (event: any, context: Context) => {
+export const main: Handler = async (event: APIGatewayProxyEvent, context: Context) => {
 	cachedServer = await bootstrapServer();
 	return proxy(cachedServer, event, context, 'PROMISE').promise;
 };
