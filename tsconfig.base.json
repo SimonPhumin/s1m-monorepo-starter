@@ -1,42 +1,27 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@s1m/common/data": [
-        "libs/common/data/src/index.ts"
-      ],
-      "@s1m/core": [
-        "libs/core/src/index.ts"
-      ],
-      "@s1m/environments": [
-        "libs/environments/src/index.ts"
-      ],
-      "@s1m/material": [
-        "libs/common/ui/material/src/index.ts"
-      ],
-      "@s1m/stores/users": [
-        "libs/stores/users/src/index.ts"
-      ],
-      "@s1m/users": [
-        "libs/common/features/users/src/index.ts"
-      ]
-    }
-  },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "esnext",
+		"lib": ["es2020", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@s1m/common/data": ["libs/common/data/src/index.ts"],
+			"@s1m/core": ["libs/core/src/index.ts"],
+			"@s1m/environments": ["libs/environments/src/index.ts"],
+			"@s1m/material": ["libs/common/ui/material/src/index.ts"],
+			"@s1m/stores/users": ["libs/stores/users/src/index.ts"],
+			"@s1m/users": ["libs/common/features/users/src/index.ts"]
+		}
+	},
+	"exclude": ["node_modules", "tmp"]
 }
