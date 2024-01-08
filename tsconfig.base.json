@@ -3,29 +3,16 @@
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
-    "noEmit": true,
-    "composite": false,
-    "declaration": true,
-    "downlevelIteration": true,
+    "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true,
     "importHelpers": true,
-    "target": "es2021",
+    "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2021",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ],
     "baseUrl": ".",
     "paths": {
       "@s1m/common/data": [
@@ -51,6 +38,5 @@
   "exclude": [
     "node_modules",
     "tmp"
-  ],
-  "files": []
+  ]
 }

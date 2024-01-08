@@ -20,7 +20,6 @@
 					"apps/admin/src/assets"
 				],
 				"styles": ["apps/admin/src/styles.css"],
-				"preserveSymlinks": true,
 				"scripts": []
 			},
 			"configurations": {
