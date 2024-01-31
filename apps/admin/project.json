@@ -81,6 +81,13 @@
 				"buildTarget": "admin:build",
 				"staticFilePath": "dist/apps/admin/browser"
 			}
+		},
+		"e2e": {
+			"executor": "@nx/playwright:playwright",
+			"outputs": ["{workspaceRoot}/dist/.playwright/apps/admin"],
+			"options": {
+				"config": "apps/admin/playwright.config.ts"
+			}
 		}
 	}
 }
