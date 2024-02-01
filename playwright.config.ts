@@ -5,29 +5,29 @@ const baseConfig: PlaywrightTestConfig = {
 		ignoreHTTPSErrors: true,
 		baseURL: 'http://host.docker.internal:4400',
 		headless: true,
-		testIdAttribute: 'data-test-id',
+		testIdAttribute: 'data-test-id'
 	},
 	projects: [
 		{ name: 'desktop-chrome', use: { ...devices['Desktop Chrome'] } },
 		{
 			name: 'desktop-webkit',
-			use: { ...devices['Desktop Safari'], deviceScaleFactor: 1 },
+			use: { ...devices['Desktop Safari'], deviceScaleFactor: 1 }
 		},
 		{
 			name: 'iphone-11-chrome',
 			use: {
 				...devices['iPhone 11'],
 				browserName: 'chromium',
-				defaultBrowserType: 'chromium',
-			},
+				defaultBrowserType: 'chromium'
+			}
 		},
 		{
 			name: 'iphone-11-webkit',
-			use: { ...devices['iPhone 11'] },
-		},
+			use: { ...devices['iPhone 11'] }
+		}
 	],
 	outputDir: 'test-reports/visual-regression',
 	workers: 3,
-	testMatch: /.*vr-spec.ts/,
+	testMatch: /.*vr-spec.ts/
 };
 export default baseConfig;
