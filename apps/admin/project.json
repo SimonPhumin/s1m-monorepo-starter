@@ -7,37 +7,20 @@
 	"tags": ["scope:admin"],
 	"targets": {
 		"build": {
-			"executor": "@angular-devkit/build-angular:application",
-			"outputs": ["{options.outputPath}"],
-			"options": {
-				"outputPath": "dist/apps/admin",
-				"index": "apps/admin/src/index.html",
-				"browser": "apps/admin/src/main.ts",
-				"polyfills": ["zone.js"],
-				"tsConfig": "apps/admin/tsconfig.app.json",
-				"assets": [
-					"apps/admin/src/favicon.ico",
-					"apps/admin/src/assets"
-				],
-				"styles": ["apps/admin/src/styles.css"],
-				"scripts": []
-			},
 			"configurations": {
 				"production": {
-					"buildOptimizer": true,
 					"extractLicenses": true,
 					"fileReplacements": [
 						{
-							"replace": "apps/starterkit/src/environments/environment.ts",
-							"with": "apps/starterkit/src/environments/environment.prod.ts"
+							"replace": "libs/environments/src/environment.ts",
+							"with": "libs/environments/src/environment.prod.ts"
 						}
 					],
 					"namedChunks": false,
 					"optimization": true,
 					"outputHashing": "all",
-					"serviceWorker": true,
+					"serviceWorker": false,
 					"sourceMap": false,
-					"vendorChunk": false,
 					"budgets": [
 						{
 							"type": "initial",
@@ -57,6 +40,22 @@
 					"sourceMap": true
 				}
 			},
+			"executor": "@angular-devkit/build-angular:application",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "dist/apps/admin",
+				"index": "apps/admin/src/index.html",
+				"browser": "apps/admin/src/main.ts",
+				"polyfills": ["zone.js"],
+				"tsConfig": "apps/admin/tsconfig.app.json",
+				"assets": [
+					"apps/admin/src/favicon.ico",
+					"apps/admin/src/assets"
+				],
+				"styles": ["apps/admin/src/styles.css"],
+				"scripts": []
+			},
+
 			"defaultConfiguration": "production"
 		},
 		"serve": {
@@ -84,7 +83,7 @@
 		"lint-styles": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "yarn lint-styles \"apps/starterkit/src/**/*.scss\" --config .stylelintrc.json --fix"
+				"command": "yarn lint-styles \"apps/admin/src/**/*.scss\" --config .stylelintrc.json --fix"
 			}
 		},
 		"test": {

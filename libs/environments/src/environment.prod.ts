@@ -1,7 +1,7 @@
 export const environment = {
 	name: 'prod',
 	// TODO: Add AWS Lambda Domain
-	serverUrl: 'https://prod-domain-here',
+	serverUrl: 'https://s1m-monorepo-starter.vercel.app',
 	production: true,
 	hmr: false,
 	features: ['users']
