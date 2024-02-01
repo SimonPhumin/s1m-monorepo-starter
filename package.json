@@ -90,7 +90,6 @@
     "@types/node": "20.11.16",
     "@typescript-eslint/eslint-plugin": "6.20.0",
     "@typescript-eslint/parser": "6.20.0",
-    "@vercel/remote-nx": "^1.1.1",
     "autoprefixer": "^10.4.17",
     "aws-lambda": "^1.0.7",
     "aws-serverless-express": "^3.4.0",
