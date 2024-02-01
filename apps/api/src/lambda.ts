@@ -28,7 +28,10 @@ async function bootstrapServer(): Promise<Server> {
 }
 
 // Export the handler : the entry point of the Lambda function
-export const main: Handler = async (event: APIGatewayProxyEvent, context: Context) => {
+export const main: Handler = async (
+	event: APIGatewayProxyEvent,
+	context: Context
+) => {
 	cachedServer = await bootstrapServer();
 	return proxy(cachedServer, event, context, 'PROMISE').promise;
 };

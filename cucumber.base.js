@@ -23,7 +23,7 @@ const common = [
 	`--require ${application}/src/steps/*.ts`,
 	`--require ${application}/src/steps/**/*.ts`,
 	// Fail on the first failed test (should be false in CI)
-	`--parallel ${totalShards}`,
+	`--parallel ${totalShards}`
 ];
 
 if (debugMode) {
@@ -36,7 +36,7 @@ if (process.env.TAGS) {
 }
 
 module.exports = {
-	default: common.join(' '),
+	default: common.join(' ')
 };
 
 /**
@@ -80,7 +80,7 @@ function getDuration(filePath) {
 	if (duration === null) {
 		const defaultDuration = '00:01:00.000';
 		console.warn(
-			`Missing time notation for ${filePath}, falling back to ${defaultDuration}`,
+			`Missing time notation for ${filePath}, falling back to ${defaultDuration}`
 		);
 		return defaultDuration;
 	} else {
@@ -99,7 +99,7 @@ function getFeatures(applicationIdentifier) {
 		const duration = getDuration(file);
 		features.push({
 			duration,
-			file,
+			file
 		});
 	});
 	return features;
@@ -143,7 +143,7 @@ function assignFeaturesToShards(applicationIdentifier, numberOfShards) {
 	// Reverse order so we start with the longest durations
 	const features = getFeatures(applicationIdentifier).sort(
 		(a, b) =>
-			convertTimeToMillis(b.duration) - convertTimeToMillis(a.duration),
+			convertTimeToMillis(b.duration) - convertTimeToMillis(a.duration)
 	);
 
 	// Create the shard arrays and the accompanying statistics
@@ -181,7 +181,7 @@ function printShardDistribution(shards) {
 				`Shard: ${
 					i + 1
 				} Duration: ${shardTime.getUTCMinutes()}:${shardTime.getUTCSeconds()}\n`,
-				shard.files,
+				shard.files
 			);
 		}
 	});
