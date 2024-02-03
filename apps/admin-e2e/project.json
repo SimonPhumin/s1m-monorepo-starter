@@ -7,14 +7,10 @@
 	"tags": ["scope:admin-e2e"],
 	"targets": {
 		"e2e": {
-			"configurations": {
-				"no-serve": {
-					"command": "APP=apps/admin-e2e yarn cucumber-js --config cucumber.base.js"
-				}
-			},
-			"executor": "nx:run-commands",
+			"executor": "@nx/playwright:playwright",
+			"outputs": ["{workspaceRoot}/dist/.playwright/apps/admin-e2e"],
 			"options": {
-				"command": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test 'nx serve admin --configuration=development' 'https://localhost:4202/' 'APP=apps/admin-e2e npx cucumber-js --config cucumber.base.js'"
+				"config": "{workspaceRoot}/playwright.config.ts"
 			}
 		},
 		"lint": {
