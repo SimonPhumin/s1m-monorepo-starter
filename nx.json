@@ -103,5 +103,13 @@
 	},
 	"nxCloudAccessToken": "MjNmOTU0NjgtMjBjOC00ZWVjLTgxNDUtNDU1ZWMyNzBlYzZifHJlYWQ=",
 	"parallel": 1,
-	"cacheDirectory": "/tmp/nx-cache"
+	"cacheDirectory": "/tmp/nx-cache",
+	"plugins": [
+		{
+			"plugin": "@nx/playwright/plugin",
+			"options": {
+				"targetName": "e2e"
+			}
+		}
+	]
 }
