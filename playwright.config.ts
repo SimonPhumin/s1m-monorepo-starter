@@ -1,9 +1,21 @@
 import { devices, PlaywrightTestConfig } from '@playwright/test';
+import { defineBddConfig } from 'playwright-bdd';
+import { nxE2EPreset } from '@nx/playwright/preset';
+
+// For CI, you may want to set BASE_URL to the deployed application.
+const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
+
+const testDir = defineBddConfig({
+  paths: ['./src/features/*.feature'],
+  require: ['./src/steps/*.ts'],
+});
+
 const baseConfig: PlaywrightTestConfig = {
+	...nxE2EPreset(__filename, { testDir }),
 	use: {
 		screenshot: 'only-on-failure',
 		ignoreHTTPSErrors: true,
-		baseURL: 'http://host.docker.internal:4400',
+		baseURL,
 		headless: true,
 		testIdAttribute: 'data-test-id'
 	},
