@@ -6,6 +6,11 @@
 	"sourceRoot": "apps/admin/src",
 	"tags": ["scope:admin"],
 	"targets": {
+		"bddgen": {
+			"command": "bddgen",
+			"options": {
+				"cwd": "{projectRoot}"
+		},
 		"build": {
 			"configurations": {
 				"production": {
@@ -99,6 +104,14 @@
 				"buildTarget": "admin:build",
 				"staticFilePath": "dist/apps/admin/browser"
 			}
+		},
+		"e2e": {
+			"executor": "@nx/playwright:playwright",
+			"dependsOn": ["bddgen"],
+			"options": {
+				"config": "{projectRoot}"
+			}
 		}
 	}
+}
 }
