@@ -23,11 +23,11 @@ Basic .feature files are written with [Gherkin](https://cucumber.io/docs/gherkin
 [⚛️ NGRX](https://ngrx.io/) - reactive-state management  
 [📦 NestJS 9](https://nestjs.com/) - api/back end (and mocking data)  
 [🧪 Jest](https://jestjs.io/) - unit testing  
-[🧪🖼️ Playwright](https://playwright.dev/) - e2e testing  
+[🖼️ Playwright](https://playwright.dev/) - e2e testing  
 [🔤 ESLint](https://eslint.org/) - code linting  
 [🔤 Prettier](https://prettier.io/) - code formatting  
-[💾 netlify](https://www.netlify.com/) - front-end deployment to netlify  
-[💾 AWS Lambda](https://aws.amazon.com/lambda/) - back-end deployment to AWS Lambda (serverless)
+[💾 Vercel](https://www.Vercel.com/) - front-end deployment
+[💾 Serverless & AWS Lambda](https://aws.amazon.com/lambda/) - back-end deployment
 
 ## 🛫 Get Started
 
@@ -35,14 +35,14 @@ Basic .feature files are written with [Gherkin](https://cucumber.io/docs/gherkin
 
 ## ↘️ Deployment
 
-### 🖼️ Front End - Netlify
+### 🖼️ Front End - Vercel
 
 ### 🍑 Back End - AWS Lambda
 
 ## 📥 TODOs
 
--   [ ] Add development section
--   [ ] Add deployment section
--   [ ] Setup playwright with nx
--   [ ] Add unit test examples
--   [ ] Add e2e test examples
+- [ ] Add development section
+- [ ] Add deployment section
+- [ ] Add unit test examples
+- [ ] Add e2e test examples
+- [ ] Add github actions to deploy back end to serverless
