@@ -8,8 +8,7 @@
 	"targets": {
 		"bddgen": {
 			"command": "bddgen",
-			"options": {
-				"cwd": "{projectRoot}"
+			"outputs": ["{workspaceRoot}/.features-gen"]
 		},
 		"build": {
 			"configurations": {
@@ -114,4 +113,4 @@
 		}
 	}
 }
-}
+
