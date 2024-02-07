@@ -1,6 +1,9 @@
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-	content: ['src/**/*.{html,ts}'],
+	content: [
+		join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
+		...createGlobPatternsForDependencies(__dirname)
+	],
 	theme: {
 		extend: {
 			animation: {
