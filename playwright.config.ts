@@ -14,8 +14,8 @@ const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
 // require('dotenv').config();
 
 const testDir = defineBddConfig({
-	paths: ['*/e2e/features/*.feature'],
-	require: ['*/e2e/steps/*.ts']
+	paths: ['./e2e/features/*.feature'],
+	require: ['./e2e/steps/*.ts']
 });
 
 /**
@@ -30,11 +30,11 @@ export default defineConfig({
 		trace: 'on-first-retry'
 	},
 	// Run your local dev server before starting the tests
-	// webServer: {
-	// 	command: 'pnmp nx serve admin',
-	// 	url: 'http://localhost:4200',
-	// 	reuseExistingServer: !process.env.CI,
-	// },
+	webServer: {
+		command: 'pnmp run start',
+		url: 'http://localhost:4200',
+		reuseExistingServer: !process.env.CI,
+	},
 	projects: [
 		{
 			name: 'chromium',
