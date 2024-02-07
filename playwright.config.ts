@@ -14,8 +14,8 @@ const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
 // require('dotenv').config();
 
 const testDir = defineBddConfig({
-	paths: ['./e2e/features/*.feature'],
-	require: ['./e2e/steps/*.ts'],
+	paths: ['*/e2e/features/*.feature'],
+	require: ['*/e2e/steps/*.ts']
 });
 
 /**
@@ -29,12 +29,12 @@ export default defineConfig({
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
 		trace: 'on-first-retry'
 	},
-	  // Run your local dev server before starting the tests
-	webServer: {
-		command: 'npx serve admin',
-		url: 'http://localhost:4200',
-		reuseExistingServer: !process.env.CI,
-	},
+	// Run your local dev server before starting the tests
+	// webServer: {
+	// 	command: 'pnmp nx serve admin',
+	// 	url: 'http://localhost:4200',
+	// 	reuseExistingServer: !process.env.CI,
+	// },
 	projects: [
 		{
 			name: 'chromium',
@@ -53,12 +53,12 @@ export default defineConfig({
 
 		{
 			name: 'Mobile Chrome',
-			use: { ...devices['Pixel 5'] },
+			use: { ...devices['Pixel 5'] }
 		},
 
 		{
 			name: 'Mobile Safari',
-			use: { ...devices['iPhone 12'] },
+			use: { ...devices['iPhone 12'] }
 		}
 	]
 });

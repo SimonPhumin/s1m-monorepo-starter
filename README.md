@@ -41,8 +41,8 @@ Basic .feature files are written with [Gherkin](https://cucumber.io/docs/gherkin
 
 ## 📥 TODOs
 
-- [ ] Add development section
-- [ ] Add deployment section
-- [ ] Add unit test examples
-- [ ] Add e2e test examples
-- [ ] Add github actions to deploy back end to serverless
+-   [ ] Add development section
+-   [ ] Add deployment section
+-   [ ] Add unit test examples
+-   [ ] Add e2e test examples
+-   [ ] Add github actions to deploy back end to serverless

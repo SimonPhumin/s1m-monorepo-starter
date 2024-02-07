@@ -2,6 +2,6 @@ const nxPreset = require('@nrwl/jest/preset');
 
 module.exports = {
 	...nxPreset,
-	escapeString: false, 
+	escapeString: false,
 	printBasicPrototype: false
 };
