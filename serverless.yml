@@ -4,7 +4,6 @@ app: s1m-monorepo-api
 
 plugins:
     - serverless-plugin-typescript
-    - serverless-plugin-optimize
 
 package:
     individually: true
