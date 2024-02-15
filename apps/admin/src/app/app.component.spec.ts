@@ -12,9 +12,8 @@ describe('AppComponent', () => {
 	it('should render title', () => {
 		const fixture = TestBed.createComponent(AppComponent);
 		fixture.detectChanges();
-		// const compiled = fixture.nativeElement as HTMLElement;
-		console.log(fixture.nativeElement);
-		expect(fixture.nativeElement.querySelector('h1')?.textContent).toContain(
+		const compiled = fixture.nativeElement as HTMLElement;
+		expect(compiled.querySelector('h1')?.textContent).toContain(
 			'Welcome Admin!'
 		);
 	});
