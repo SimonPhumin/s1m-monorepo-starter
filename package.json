@@ -101,7 +101,6 @@
     "prettier": "3.2.5",
     "serverless-layers": "^2.7.0",
     "serverless-offline": "^13.3.3",
-    "serverless-plugin-optimize": "^4.2.1-rc.1",
     "serverless-plugin-typescript": "^2.1.5",
     "start-server-and-test": "2.0.3",
     "tailwindcss": "^3.4.1",
