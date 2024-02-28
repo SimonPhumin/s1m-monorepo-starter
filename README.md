@@ -26,7 +26,7 @@ Basic .feature files are written with [Gherkin](https://cucumber.io/docs/gherkin
 [🖼️ Playwright](https://playwright.dev/) - e2e testing  
 [🔤 ESLint](https://eslint.org/) - code linting  
 [🔤 Prettier](https://prettier.io/) - code formatting  
-[💾 Vercel](https://www.Vercel.com/) - front-end deployment
+[💾 Vercel](https://www.Vercel.com/) - front-end deployment  
 [💾 Serverless & AWS Lambda](https://aws.amazon.com/lambda/) - back-end deployment
 
 ## 🛫 Get Started

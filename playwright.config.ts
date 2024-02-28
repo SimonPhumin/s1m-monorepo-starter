@@ -15,7 +15,7 @@ const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
 
 const testDir = defineBddConfig({
 	paths: ['./e2e/features/*.feature'],
-	require: ['./e2e/steps/*.ts']
+	require: ['./e2e/steps/*.steps.ts']
 });
 
 /**
