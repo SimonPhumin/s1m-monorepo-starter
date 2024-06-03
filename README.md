@@ -18,8 +18,8 @@ Basic .feature files are written with [Gherkin](https://cucumber.io/docs/gherkin
 ## 🎯 Features
 
 [📦 Nx](https://nx.dev/) - monorepo tooling  
-[🛠️ Angular 16](https://angular.io/) - front-end framework  
-[🎨 Tailwind UI](https://tailwindui.com/) - UI component library  
+[🛠️ Angular 18](https://angular.io/) - front-end framework  
+[🎨 Material UI](https://material.angular.io/) - UI component library  
 [⚛️ NGRX](https://ngrx.io/) - reactive-state management  
 [📦 NestJS 9](https://nestjs.com/) - api/back end (and mocking data)  
 [🧪 Jest](https://jestjs.io/) - unit testing  
