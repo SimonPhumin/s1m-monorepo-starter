@@ -12,8 +12,7 @@ Read more about trunk-based development [here](https://trunkbaseddevelopment.com
 
 ## 🥒 Behavior-Driven Development (BDD)
 
-In BDD you write your system requirements in structural but natural language. Writing end-to-end tests in natural language enlarges the audience that can read and use them.
-Basic .feature files are written with [Gherkin](https://cucumber.io/docs/gherkin/) syntax. User stories (and even use cases) are based on a similar structure and therefore .feature files won't only help stakeholders to better understand specific user flows or scenarios, they can also be used as a skeleton for automated tests (e.g. e2e tests).
+In BDD, you write your system requirements in natural language. This makes them easier to read and use. Basic .feature files are written with Gherkin syntax. User stories and use cases are based on the same structure, so feature files help stakeholders understand user flows and scenarios. They can also be used for automated tests.
 
 ## 🎯 Features
 
