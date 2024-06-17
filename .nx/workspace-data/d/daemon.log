@@ -1,0 +1,51 @@
+[NX Daemon Server] - 2024-06-17T18:35:02.206Z - Started listening on: /tmp/1ea88c8611abc45684e4/d.sock
+[NX Daemon Server] - 2024-06-17T18:35:02.208Z - [WATCHER]: Subscribed to changes within: /home/simon/dev/s1m-monorepo-starter (native)
+[NX Daemon Server] - 2024-06-17T18:35:02.215Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-06-17T18:35:02.216Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-06-17T18:35:02.217Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-06-17T18:35:02.220Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2024-06-17T18:35:02.220Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2024-06-17T18:35:02.220Z - Handled GLOB. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-06-17T18:35:02.377Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-06-17T18:35:02.377Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-06-17T18:35:02.377Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-06-17T18:35:03.120Z - [REQUEST]: Responding to the client. handleNxWorkspaceFiles
+[NX Daemon Server] - 2024-06-17T18:35:03.120Z - Done responding to the client handleNxWorkspaceFiles
+[NX Daemon Server] - 2024-06-17T18:35:03.120Z - Handled GET_FILES_IN_DIRECTORY. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-06-17T18:35:03.128Z - [REQUEST]: Responding to the client. handleNxWorkspaceFiles
+[NX Daemon Server] - 2024-06-17T18:35:03.128Z - Done responding to the client handleNxWorkspaceFiles
+[NX Daemon Server] - 2024-06-17T18:35:03.128Z - Handled GET_NX_WORKSPACE_FILES. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-06-17T18:35:03.376Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-06-17T18:38:31.018Z - Started listening on: /tmp/1ea88c8611abc45684e4/d.sock
+[NX Daemon Server] - 2024-06-17T18:38:31.020Z - [WATCHER]: Subscribed to changes within: /home/simon/dev/s1m-monorepo-starter (native)
+[NX Daemon Server] - 2024-06-17T18:38:31.020Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-06-17T18:38:31.021Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-06-17T18:38:31.022Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-06-17T18:38:31.023Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-06-17T18:38:31.078Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-06-17T18:38:31.078Z - [REQUEST]: 
+[NX Daemon Server] - 2024-06-17T18:38:31.078Z - [REQUEST]: 
+[NX Daemon Server] - 2024-06-17T18:38:31.941Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-06-17T18:38:31.942Z - Time taken for 'total for creating and serializing project graph' 918.351359ms
+[NX Daemon Server] - 2024-06-17T18:38:31.943Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-06-17T18:38:31.943Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 918. Response time: 2.
+[NX Daemon Server] - 2024-06-17T18:38:31.990Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-06-17T18:38:31.990Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-06-17T18:38:31.991Z - Handled HASH_TASKS. Handling time: 15. Response time: 1.
+[NX Daemon Server] - 2024-06-17T18:38:32.186Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-06-17T18:38:32.187Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-06-17T18:38:32.187Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-06-17T18:38:37.257Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-06-17T18:38:37.258Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-06-17T18:38:37.258Z - Handled PROCESS_IN_BACKGROUND. Handling time: 32. Response time: 1.
+[NX Daemon Server] - 2024-06-17T18:38:37.258Z - Uploading file artifacts
+[NX Daemon Server] - 2024-06-17T18:38:37.297Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-06-17T18:38:37.525Z - Done uploading file artifacts
+[NX Daemon Server] - 2024-06-17T18:38:37.525Z - Sending EndRun request
+[NX Daemon Server] - 2024-06-17T18:38:37.695Z - Done sending EndRun request
+[NX Daemon Server] - 2024-06-17T18:38:58.295Z - [WATCHER]: nx.json was modified
+[NX Daemon Server] - 2024-06-17T18:38:58.295Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-06-17T18:38:58.395Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-06-17T18:38:58.395Z - [REQUEST]: nx.json
+[NX Daemon Server] - 2024-06-17T18:38:58.395Z - [REQUEST]: 
+[NX Daemon Server] - 2024-06-17T18:38:58.453Z - Time taken for 'hash changed files from watcher' 0.15549900000041816ms
