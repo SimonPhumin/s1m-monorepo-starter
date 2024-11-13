@@ -53,4 +53,5 @@ jspm_packages
 .nx/cache
 /.nx
 .nx/*
+/.nx/workspace-data/*
 .nx/workspace-data
