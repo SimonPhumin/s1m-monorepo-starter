@@ -1,5 +1,5 @@
 BRANCH=`git rev-parse --abbrev-ref HEAD`
-PROTECTED_BRANCHES="^(master|dev|testGitHook)"
+PROTECTED_BRANCHES="^(master)"
 
 if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]; then
 

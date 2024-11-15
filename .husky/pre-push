@@ -4,7 +4,7 @@
 # Bypass with git push --no-verify
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
-PROTECTED_BRANCHES="^(master|dev|testGitHook)"
+PROTECTED_BRANCHES="^(master)"
 
 if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]; then
   read -p "Are you sure you want to push to \"$BRANCH\" ? (y/n): " -n 1 -r < /dev/tty

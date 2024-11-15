@@ -49,9 +49,5 @@ jspm_packages
 .serverless
 
 # nx - build
-/.build
-.nx/cache
-/.nx
-.nx/*
-/.nx/workspace-data/*
-.nx/workspace-data
+.build/
+.nx/
