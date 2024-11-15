@@ -50,4 +50,7 @@ jspm_packages
 
 # nx - build
 /.build
+.nx/*
 /.nx
+.nx/cache
+.nx/workspace-data
