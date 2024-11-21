@@ -22,8 +22,8 @@
 		},
 		"@nx/angular:library": {
 			"linter": "eslint",
-			"strict": false,
-			"unitTestRunner": "jest"
+			"unitTestRunner": "jest",
+			"strict": false
 		},
 		"@nx/angular:component": {
 			"style": "scss"
