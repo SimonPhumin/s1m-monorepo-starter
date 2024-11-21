@@ -1,49 +1,32 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
-    "module": "ES2022",
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "resolveJsonModule": true,
-    "paths": {
-      "@s1m/common/data": [
-        "libs/common/data/src/index.ts"
-      ],
-      "@s1m/core": [
-        "libs/core/src/index.ts"
-      ],
-      "@s1m/environments": [
-        "libs/environments/src/index.ts"
-      ],
-      "@s1m/material": [
-        "libs/common/ui/material/src/index.ts"
-      ],
-      "@s1m/stores/users": [
-        "libs/stores/users/src/index.ts"
-      ],
-      "@s1m/users": [
-        "libs/common/features/users/src/index.ts"
-      ]
-    }
-  },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"baseUrl": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "ES2022",
+		"lib": ["ES2022", "dom"],
+		"module": "ES2022",
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"resolveJsonModule": true,
+		"paths": {
+			"@s1m/common/data": ["libs/common/data/src/index.ts"],
+			"@s1m/core": ["libs/core/src/index.ts"],
+			"@s1m/environments": ["libs/environments/src/index.ts"],
+			"@s1m/material": ["libs/common/ui/material/src/index.ts"],
+			"@s1m/stores/users": ["libs/stores/users/src/index.ts"],
+			"@s1m/users": ["libs/common/features/users/src/index.ts"],
+			"components": ["libs/common/ui/components/src/index.ts"]
+		}
+	},
+	"exclude": ["node_modules", "tmp"]
 }
