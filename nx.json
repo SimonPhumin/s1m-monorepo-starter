@@ -53,7 +53,6 @@
 			"{workspaceRoot}/nx.json",
 			"{workspaceRoot}/package.json",
 			"{workspaceRoot}/playwright.config.ts",
-			"{workspaceRoot}/tailwind.config.js",
 			"{workspaceRoot}/tsconfig.base.json",
 			"{workspaceRoot}/libs/assets/i18n/de.json",
 			"{workspaceRoot}/libs/assets/i18n/en.json"
