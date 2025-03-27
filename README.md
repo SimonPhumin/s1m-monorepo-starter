@@ -17,10 +17,10 @@ In BDD, you write your system requirements in natural language. This makes them 
 ## 🎯 Features
 
 [📦 Nx](https://nx.dev/) - monorepo tooling  
-[🛠️ Angular 18](https://angular.io/) - front-end framework  
+[🛠️ Angular 19](https://angular.io/) - front-end framework  
 [🎨 Material UI](https://material.angular.io/) - UI component library  
 [⚛️ NGRX](https://ngrx.io/) - reactive-state management  
-[📦 NestJS 9](https://nestjs.com/) - api/back end (and mocking data)  
+[📦 NestJS 11](https://nestjs.com/) - api/back end (and mocking data)  
 [🧪 Jest](https://jestjs.io/) - unit testing  
 [🖼️ Playwright](https://playwright.dev/) - e2e testing  
 [🔤 ESLint](https://eslint.org/) - code linting  
