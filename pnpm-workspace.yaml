@@ -1,5 +1,12 @@
 onlyBuiltDependencies:
   - '@nestjs/core'
+  - '@parcel/watcher'
   - '@swc/core'
+  - aws-sdk
+  - esbuild
+  - lmdb
+  - msgpackr-extract
   - nx
+  - oxc-resolver
   - serverless
+  - unrs-resolver

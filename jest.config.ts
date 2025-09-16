@@ -1,3 +1,3 @@
-const { getJestProjects } = require('@nx/jest');
+const { getJestProjectsAsync } = require('@nx/jest');
 
-module.exports = { projects: getJestProjects(), testEnvironment: 'jsdom' };
+module.exports = async () => ({ projects: await getJestProjectsAsync(), testEnvironment: 'jsdom' });

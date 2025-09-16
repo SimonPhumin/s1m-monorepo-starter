@@ -39,3 +39,5 @@ Thumbs.db
 .nx/cache
 .nx/
 .angular
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
