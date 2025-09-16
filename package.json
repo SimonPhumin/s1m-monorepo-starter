@@ -20,7 +20,7 @@
 		"workspace-generator": "nx workspace-generator",
 		"dep-graph": "nx dep-graph",
 		"help": "nx help",
-		"prepare": "husky"
+		"prepare": "husky || true"
 	},
 	"private": true,
 	"dependencies": {

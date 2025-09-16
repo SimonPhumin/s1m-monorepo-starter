@@ -1,12 +1,16 @@
+packages:
+    - 'apps/*'
+    - 'libs/*'
+
 onlyBuiltDependencies:
-  - '@nestjs/core'
-  - '@parcel/watcher'
-  - '@swc/core'
-  - aws-sdk
-  - esbuild
-  - lmdb
-  - msgpackr-extract
-  - nx
-  - oxc-resolver
-  - serverless
-  - unrs-resolver
+    - '@nestjs/core'
+    - '@parcel/watcher'
+    - '@swc/core'
+    - aws-sdk
+    - esbuild
+    - lmdb
+    - msgpackr-extract
+    - nx
+    - oxc-resolver
+    - serverless
+    - unrs-resolver
